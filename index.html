@@ -7,25 +7,26 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <input id="firstName" class="textBox" type="text" placeholder="First Name" />
-      <input id="lastName" class="textBox" type="text" placeholder="Last Name" />
-      <input id="emailAdd" class="textBox" type="text" placeholder="Email Address" /> <br>
-      
-      <input type="checkbox" id="notRobot" >
-      <label for="notRobot" id ="robotLabel">I am not a robot</label> <br>
-      
-      <button id="submitForm">Submit</button>
+</head>
 
+<body>
+    <input id="firstName" class="textBox" type="text" placeholder="First Name" />
+    <input id="lastName" class="textBox" type="text" placeholder="Last Name" />
+    <input id="emailAdd" class="textBox" type="text" placeholder="Email Address" /> <br>
+
+    <input type="checkbox" id="notRobot">
+    <label for="notRobot" id="robotLabel">I am not a robot</label> <br>
+
+    <button id="submitForm">Submit</button>
+
+    <div id="loadCircle" class="loader"></div>
 
 
     <script src="script.js"></script>
     <script>
-      (function() {
-        app.initialize();
-      })();
-
+        (function() {
+            app.initialize();
+        })();
     </script>
-  </body>
+</body>
 </html>
