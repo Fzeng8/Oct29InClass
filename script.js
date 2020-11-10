@@ -4,6 +4,7 @@ const app = {
     firstNameContent: document.getElementById("firstName"),
     lastNameContent: document.getElementById("lastName"),
     emailContent: document.getElementById("emailAdd"),
+    robotCheck: document.getElementById("notRobot"),
 
     initialize: function () {
         document.getElementById('submitForm').addEventListener('click', () => {
@@ -11,6 +12,7 @@ const app = {
             app.firstNameEmpty();
             app.lastNameEmpty();
             app.emailEmpty();
+            app.robotEmpty();
         });
     },
 
@@ -36,11 +38,20 @@ const app = {
     emailEmpty: function () {
         if (app.emailContent.value.includes("@")) {
             app.emailContent.classList.remove('redBorder');
-            console.log("yes @")
+            //console.log("yes @")
         } else {
             app.emailContent.classList.add('redBorder');
         }
   },
+    
+    robotEmpty: function () {
+        if (app.robotCheck.checked === false) {
+            console.log("no check")
+            document.getElementById("robotLabel").classList.add('redText');
+        } else {
+            document.getElementById("robotLabel").classList.remove('redText');
+        }
+    },
 
 
 }
