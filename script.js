@@ -14,6 +14,8 @@ const app = {
 
 
     initialize: function () {
+       document.getElementById("thankYou").classList.add('hideItem');
+        
         document.getElementById('submitForm').addEventListener('click', () => {
             // console.log("yes", app.firstNameContent.value, app.lastNameContent.value, app.emailContent.value);
             app.firstNameEmpty();
@@ -28,8 +30,10 @@ const app = {
                 app.robotCheck.classList.add('hideItem');
                 app.submitButton.classList.add('hideItem');
                 document.getElementById("robotLabel").classList.add('hideItem');
-                
+
                 document.getElementById("loadCircle").classList.add('showItem');
+
+                setTimeout(app.thankShow, 3000);
 
             };
         });
@@ -78,6 +82,13 @@ const app = {
             document.getElementById("robotLabel").classList.remove('redText');
             app.checkBool = true;
         }
+    },
+
+    thankShow: function () {
+//        console.log("worked");
+        document.getElementById("loadCircle").classList.remove('showItem');
+        document.getElementById("thankYou").classList.remove('hideItem');
+
     },
 
 
